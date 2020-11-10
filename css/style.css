@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kumbh+Sans:wght@300;700&family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background: #642B73;  
+    background: -webkit-linear-gradient(to right, #C6426E, #642B73);  
+    background: linear-gradient(to right, #C6426E, #642B73); 
+
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    text-align: center;
+}
+body header h1.heading__top{
+    margin: 2rem 0;
+    text-shadow: 0 0 4px rgba(0,0,0,.3);
+    font-size: 4rem;
+}
+.container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form input{
+    min-width: 20rem;
+    max-width: 50rem;
+}
+form input::placeholder{
+    color: #ccc;
+}
+form input, form button{
+    padding: .5rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+form button {
+    font-size: .85rem;
+    cursor: pointer;
+    background-color: #111;
+    color: #fc4a1a;
+    transition: all 350ms ease;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    left: -20px;
+}
+form button:hover{
+    color: #fff;
+}
+.todo__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    /* background-color: rgba(240, 239, 239,.5); */
+    min-width: 50%;
+    margin-top: 1.5rem;
+    
+}
+.todo{
+    margin: .5rem;
+    background-color: #f1f1f1;
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    padding: .25rem .5rem;
+    transition: all 350ms ease;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+}
+.todo li{
+    flex: 1;
+}
+.todo-list{
+    min-width: 30%;
+    background-color: #000;
+    width: 100%;
+}
+.completed_btn, 
+.trash_btn{
+    color: #fff;
+    background-color: #fc4a1a;
+    outline: none;
+    border: none;
+    padding: .28rem .5rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.completed_btn{
+    margin-right: .5rem;
+    background-color: rgb(115, 180, 16);
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    -webkit-transform: translateY(8rem) rotateZ(20deg);
+    -moz-transform: translateY(8rem) rotateZ(20deg);
+    -ms-transform: translateY(8rem) rotateZ(20deg);
+    -o-transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.select{
+    text-align: center;
+    overflow: hidden;
+    padding: 1rem ;
+    position: relative;
+}
+.select select{
+    -webkit-appearance :none;
+    -moz-appearance :none;
+    appearance :none;
+    border: none;
+    width: 10rem;
+    padding: .2rem .5rem;
+    font-size: 1rem;
+    color: #fc4a1a;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+}
+.select::after{
+    content: "\25BC";
+    font-size: 1;
+    color: #fc4a1a;
+    background-color: #111;
+    position: absolute;
+    cursor: pointer;
+    padding: 0 .15rem;
+    pointer-events: none;
+    top: 1rem;
+    right: 6rem;
+    z-index: 10;
+
+}
+.select select option.select-option{
+    margin: .28rem;
+    cursor: pointer;
+}
+.select select option.select-option:hover{
+    background-color: #111;
+    color: #fff;
+}
+@media screen and (max-width:1030px){
+    .todo__container{
+        max-width: 80%;
+    }
+    .heading__top{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width:893px){
+    .todo__container{
+        min-width: 90%;
+    }
+    .heading__top{
+        font-size: 2.8rem;
+    }
+}
+@media screen and (max-width:608px){
+    .todo__container{
+        min-width: 100%;
+    }
+    .select select{
+        width: 10rem;
+    }
+    .add__todo{
+        width: 80%;
+    }
+    .heading__top{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width:508px){
+    .todo__container{
+        min-width: 100%;
+        padding: .5rem;
+    }
+    .add__todo{
+        width: 80%;
+    }
+    .heading__top{
+        font-size: 2rem;
+    }
+}
+
